@@ -1,5 +1,8 @@
 FROM php:8.2-apache
 
+# Nonaktifkan MPM yang bentrok, aktifkan prefork untuk Apache
+RUN a2dismod mpm_event mpm_worker && a2enmod mpm_prefork
+
 # Install ekstensi sistem yang dibutuhkan Laravel
 RUN apt-get update && apt-get install -y \
     libpng-dev \
