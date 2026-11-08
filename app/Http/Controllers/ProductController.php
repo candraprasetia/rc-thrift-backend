@@ -22,6 +22,7 @@ class ProductController extends Controller
             'name' => $request->name,
             'price' => $request->price,
             'description' => 'Baju thrift',
+            'category' => $request->category,
             'image' => $imagePath,
         ]);
         return response()->json($product, 201);

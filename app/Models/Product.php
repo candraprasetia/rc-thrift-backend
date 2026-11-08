@@ -10,5 +10,5 @@ class Product extends Model
     use HasFactory;
 
     // Baris ini wajib ada agar nama dan harga baju tidak diblokir saat disimpan
-    protected $fillable = ['name', 'description', 'price', 'image'];
+    protected $fillable = ['name', 'description', 'price', 'image', 'category'];
 }
