@@ -33,6 +33,7 @@ class ProductController extends Controller
         $product = Product::query()->findOrFail($id);
         $product->name = $request->name;
         $product->price = $request->price;
+        $product->category = $request->category;
 
         // Jika admin mengupload gambar baru saat edit
         if ($request->hasFile('image')) {
